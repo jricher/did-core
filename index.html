@@ -2855,20 +2855,22 @@ Resolver options can for example be used to control caching or content negotiati
       </p>
 
       <p>
-<a>Resolver options</a> are expressed as a map of name-value string pairs.
+<a>Resolver options</a> are expressed as a map of plain string key-value pairs.
       </p>
       <p>
 <a>Resolver options</a> MAY be method-independent or method-specific.
       </p>
       <p>
-The concrete representation of <a>resolver options</a> MUST be defined by the applicable <a>binding</a> of
-the <a>DID resolution</a> or <a>DID URL dereferencing</a> function.
+The concrete representation of <a>resolver options</a> as represented on the wire MUST be defined 
+by the applicable <a>binding</a> of the <a>DID resolution</a> or <a>DID URL dereferencing</a>
+function.
       </p>
 
       <p class="note">
 For example, a concrete <a>binding</a> of the <a>DID resolution</a> or <a>DID URL
 dereferencing</a> function might define how resolver options are represented in the form
-of headers of a network protocol.
+of headers of a network protocol. All <a>binding</a> definitions need to present a way
+for callers to pass in an arbitrary map of plain string key-value pairs.
       </p>
 
       <p>
